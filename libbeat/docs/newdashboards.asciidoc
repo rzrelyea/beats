@@ -262,11 +262,11 @@ If you change the fields exported by the Beat, you need to generate a new index 
 you can just use the index pattern available under the `etc/kibana/index-pattern` directory or in the `beats-dashboards`
 archive for the Elastic Beats.
 
-The Beat index pattern is generated from the `etc/fields.yml`, where all the fields for a Beat are defined. For each field, besides the `type`, you can configure the
+The Beat index pattern is generated from the `etc/fields.yml` (version 5.0) or the `_meta/fields.yml` (version 5.1 and above), where all the fields for a Beat are defined. For each field, besides the `type`, you can configure the
 `format` field. The format informs Kibana about how to display a certain field. A good example is `percentage` or `bytes`
 to display fields as `50%` or `5MB`.
 
-To generate the index pattern from the `etc/fields.yml`, you need to run the following command in the Beat repository:
+To generate the index pattern from the `fields.yml`, you need to run the following command in the Beat repository:
 
 [source,shell]
 ---------------
